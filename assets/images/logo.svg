@@ -1,0 +1,28 @@
+<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo Réseau Finance Nature - Dark variant (for light backgrounds) -->
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="92" stroke="#122A1A" stroke-width="2.8"/>
+
+  <!-- Organic intertwined botanical design -->
+  <path d="M100 158 C85 145, 50 125, 38 95 C28 68, 38 40, 62 30 C78 24, 92 30, 100 42"
+        stroke="#122A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 42 C112 32, 142 24, 160 40 C172 52, 168 78, 152 95"
+        stroke="#122A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M152 95 C142 112, 125 138, 108 152 C104 155, 100 158, 100 158"
+        stroke="#122A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M82 155 C68 135, 52 108, 52 85 C52 62, 65 45, 85 38 C95 34, 100 38, 100 42"
+        stroke="#122A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 42 C108 48, 128 52, 142 62 C155 72, 155 92, 142 108"
+        stroke="#122A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M142 108 C132 122, 118 140, 105 152"
+        stroke="#122A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M78 105 C65 88, 65 62, 80 50 C90 42, 100 45, 108 55 C118 68, 118 90, 108 105"
+        stroke="#122A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M108 105 C100 115, 88 118, 78 112 C72 108, 74 105, 78 105"
+        stroke="#122A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M72 140 C62 125, 48 100, 48 78 C48 55, 62 38, 82 32"
+        stroke="#122A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M115 38 C135 42, 158 58, 162 82 C165 100, 152 125, 135 142"
+        stroke="#122A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="100" cy="26" rx="4" ry="5" fill="#122A1A"/>
+</svg>
