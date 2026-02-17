@@ -1,4 +1,4 @@
-# Réseau Finance Nature — Site vitrine v1.0
+# Réseau Finance Nature — Site vitrine v1.1
 
 Association loi 1901 fédérant les acteurs financiers territoriaux pour sensibiliser aux enjeux de la nature et mobiliser les financements privés.
 
@@ -25,7 +25,26 @@ Champs : Nom, Prénom, Structure, Email, Téléphone, Sujet.
 
 ### Espace membres (protégé)
 Ressources exclusives accessibles par mot de passe : articles, vidéos YouTube, documents.  
-Filtrage par type de ressource.
+Filtrage par type de ressource avec boutons accessibles (`aria-pressed`).
+
+## ♿ Accessibilité (WCAG AA)
+
+Le site a été audité et corrigé pour répondre aux exigences WCAG 2.1 AA :
+
+| Critère | Implémentation |
+|---|---|
+| **Contrastes** | Toutes les combinaisons texte/fond ≥ 4.5:1 (texte normal) ou 3.0:1 (texte large/UI) |
+| **Skip link** | Lien "Aller au contenu principal" visible au focus clavier |
+| **Focus visible** | Outline 2px sur tous les éléments interactifs (`focus-visible`) |
+| **Icônes décoratives** | `aria-hidden="true"` sur toutes les icônes Font Awesome (50+) |
+| **Sections** | `aria-labelledby` ou `aria-label` sur chaque `<section>` |
+| **Navigation** | `<nav>` avec `aria-label` (principale + footer) |
+| **Menu mobile** | `aria-expanded` + `aria-controls` synchronisés par JS |
+| **Filtres** | `role="group"` + `aria-label` + `aria-pressed` sur chaque bouton |
+| **Erreurs** | `role="alert"` + `aria-live="assertive"` sur messages d'erreur |
+| **Titres** | Hiérarchie h1→h2→h3→h4 sans saut de niveau |
+| **Formulaire** | `aria-label` sur `<form>`, `<label>` sur chaque champ, honeypot masqué AT |
+| **SVG décoratif** | `aria-hidden="true"` + `focusable="false"` |
 
 ## 🚀 Déploiement
 
@@ -80,14 +99,20 @@ Après commit + push, le contenu apparaît automatiquement sur le site.
 
 ## 🎨 Charte graphique
 
-| Couleur | Hex | Usage |
-|---|---|---|
-| Vert forêt | `#1B4332` | Couleur principale |
-| Or discret | `#C9A84C` | Accents, CTA |
-| Vert sauge | `#588157` | Secondaire |
-| Fond clair | `#FAFAF5` | Arrière-plan |
+| Couleur | Hex | Usage | Contraste sur fond clair |
+|---|---|---|---|
+| Vert profond | `#122A1A` | Couleur principale, texte, header/hero/footer | 14.56:1 ✅ |
+| Vert menthe | `#BFFFB5` | Accents visuels, boutons CTA (texte foncé dessus) | — |
+| Vert soutenu | `#357248` | Labels, overlines, citations, liens (texte sur clair) | 5.47:1 ✅ |
+| Vert moyen | `#469868` | Puces, accents légers | 3.53:1 ✅ |
+| Texte principal | `#1E2D24` | Corps de texte | 13.72:1 ✅ |
+| Texte secondaire | `#4A6355` | Sous-titres, descriptions | 6.23:1 ✅ |
+| Texte atténué | `#567064` | Métadonnées, dates | 5.12:1 ✅ |
+| Fond clair | `#F7FAF7` | Arrière-plan principal | — |
 
 **Typographies** : Playfair Display (titres) + Inter (corps)
+
+**Logo** : SVG dans `assets/images/` — variante sombre (`logo.svg`) et claire (`logo-light.svg`)
 
 ## 📁 Structure du projet
 
@@ -98,9 +123,10 @@ Après commit + push, le contenu apparaît automatiquement sur le site.
 ├── _posts/               # Articles de blog (Markdown)
 ├── _ressources/          # Ressources membres (Markdown)
 ├── assets/
-│   ├── css/style.css     # Styles complets
+│   ├── css/style.css     # Design system complet (~2000 lignes)
+│   ├── images/           # Logo SVG (dark + light)
 │   └── js/
-│       ├── main.js       # Navigation, animations, filtres
+│       ├── main.js       # Navigation, animations, filtres, a11y
 │       └── auth.js       # Authentification espace membres
 ├── pages/                # Pages statiques (contact, membres, merci)
 ├── index.html            # Page d'accueil
