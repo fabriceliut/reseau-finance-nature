@@ -1943,69 +1943,20 @@ h4 { font-size: 1.1rem; }
   color: var(--color-accent-light);
 }
 
-/* --- Contact also section --- */
-.contact-also {
+/* --- Contact callout --- */
+.contact-callout {
   margin-top: var(--space-lg);
-  padding-top: var(--space-md);
-  border-top: 1px solid var(--color-border);
-}
-
-.contact-also-title {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: var(--space-md);
-}
-
-.contact-also-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-sm);
-}
-
-.contact-also-card {
-  background: var(--color-bg-alt);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: var(--space-md);
-  text-align: center;
-  transition: var(--transition);
-}
-
-.contact-also-card:hover {
-  border-color: var(--color-accent);
-  box-shadow: var(--shadow-sm);
-}
-
-.contact-also-icon {
-  width: 40px;
-  height: 40px;
+  padding: var(--space-md) var(--space-lg);
   background: var(--color-secondary);
-  color: var(--color-primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto var(--space-xs);
-  font-size: 1rem;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--color-primary);
 }
 
-.contact-also-card p {
-  font-size: 0.85rem;
-  color: var(--color-text-light);
-  line-height: 1.5;
+.contact-callout p {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  line-height: 1.6;
   margin: 0;
-}
-
-.contact-also-card strong {
-  color: var(--color-primary);
-}
-
-@media (max-width: 600px) {
-  .contact-also-cards {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* --- Responsive additions --- */
