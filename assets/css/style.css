@@ -1707,19 +1707,18 @@ h4 { font-size: 1.1rem; }
 }
 
 .cta-cards p {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--color-text-light);
   margin-bottom: var(--space-xs);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  line-height: 1.6;
 }
 
 .cta-cards p i {
   color: var(--color-accent);
+  margin-right: 0.5rem;
   width: 20px;
+  display: inline-block;
   text-align: center;
-  flex-shrink: 0;
 }
 
 .cta-cards a {
