@@ -1,64 +1,109 @@
-# Réseau Finance Nature — Site vitrine v1.1
+# Réseau Finance Nature
 
-Association loi 1901 fédérant les acteurs financiers territoriaux pour sensibiliser aux enjeux de la nature et mobiliser les financements privés.
+> Fédérer les acteurs financiers territoriaux pour sensibiliser aux enjeux de la nature, mobiliser les financements privés et coopérer en faveur de projets à impact positif.
 
-**🔗 Site en ligne : [fabriceliut.github.io/reseau-finance-nature](https://fabriceliut.github.io/reseau-finance-nature/)**
+[![Site en ligne](https://img.shields.io/badge/Site-fabriceliut.github.io-122A1A?style=for-the-badge&logo=github)](https://fabriceliut.github.io/reseau-finance-nature/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Réseau%20Finance%20Nature-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/company/r%C3%A9seau-finance-nature/)
 
 ---
 
-## 🌿 Contenu du site
+## À propos
 
-### Page d'accueil
-- **Hero** avec accroche et CTA
-- **Citation IPBES** (Février 2026)
-- **Qui sommes-nous** : 4 objectifs fondamentaux (sensibiliser, mobiliser, coopérer, valoriser)
-- **Contexte** : chiffres clés (50% PIB / 72% BCE / 42% AFD) + exemples de services écosystémiques
-- **Actualités** : timeline de faits marquants (2024–2026) — IPBES, CERES, Fonds Objectif Biodiversité, Norsys…
-- **Missions** : Mise en mouvement (Risques Nature, Gouvernance Nature, Financement) + Mise en relation (catalogue d'expertise, vitrine projets, dossiers de financement)
-- **Adhésion** : cible prioritaire + cible élargie + avantages membres
-- **Gouvernance** : Pauline Maillard, Pierre Béal, Roland Cathebras
-- **CTA final**
+Le **Réseau Finance Nature** est une association loi 1901, créée en 2026, qui rassemble les acteurs financiers territoriaux (banques, sociétés de gestion, family offices, réseaux de Business Angels…) autour de quatre objectifs :
 
-### Formulaire de contact
-Champs : Nom, Prénom, Structure, Email, Téléphone, Sujet.  
-→ Envoi à **pauline@reseaufinancenature.org** via [FormSubmit](https://formsubmit.co/) (gratuit, sans inscription).
+1. **Sensibiliser & former** aux enjeux de la nature comme facteur clé pour les entreprises et les territoires
+2. **Mobiliser les financements** privés en faveur de projets à impact positif pour la nature
+3. **Coopérer & connecter** les acteurs de l'écosystème territorial
+4. **Valoriser les actions** des membres et les initiatives positives
 
-### Espace membres (protégé)
-Ressources exclusives accessibles par mot de passe : articles, vidéos YouTube, documents.  
-Filtrage par type de ressource avec boutons accessibles (`aria-pressed`).
+## Fonctionnalités du site
 
-## ♿ Accessibilité (WCAG AA)
-
-Le site a été audité et corrigé pour répondre aux exigences WCAG 2.1 AA :
-
-| Critère | Implémentation |
+| Fonctionnalité | Description |
 |---|---|
-| **Contrastes** | Toutes les combinaisons texte/fond ≥ 4.5:1 (texte normal) ou 3.0:1 (texte large/UI) |
-| **Skip link** | Lien "Aller au contenu principal" visible au focus clavier |
-| **Focus visible** | Outline 2px sur tous les éléments interactifs (`focus-visible`) |
-| **Icônes décoratives** | `aria-hidden="true"` sur toutes les icônes Font Awesome (50+) |
-| **Sections** | `aria-labelledby` ou `aria-label` sur chaque `<section>` |
-| **Navigation** | `<nav>` avec `aria-label` (principale + footer) |
-| **Menu mobile** | `aria-expanded` + `aria-controls` synchronisés par JS |
-| **Filtres** | `role="group"` + `aria-label` + `aria-pressed` sur chaque bouton |
-| **Erreurs** | `role="alert"` + `aria-live="assertive"` sur messages d'erreur |
-| **Titres** | Hiérarchie h1→h2→h3→h4 sans saut de niveau |
-| **Formulaire** | `aria-label` sur `<form>`, `<label>` sur chaque champ, honeypot masqué AT |
-| **SVG décoratif** | `aria-hidden="true"` + `focusable="false"` |
+| **Page d'accueil** | Présentation complète : objectifs, contexte, chiffres clés, missions, adhésion, gouvernance |
+| **Formulaire de contact** | Envoi direct à pauline@reseaufinancenature.org via [FormSubmit](https://formsubmit.co/) |
+| **Espace membres** | Zone protégée par mot de passe avec ressources exclusives (articles, vidéos, documents) |
+| **Responsive** | Design adapté mobile, tablette et desktop (7 breakpoints) |
+| **Accessibilité WCAG AA** | Contrastes vérifiés, navigation clavier, ARIA, skip-link, focus-visible |
+| **SEO complet** | Meta tags, Open Graph, sitemap, Jekyll SEO Tag |
+| **Déploiement auto** | Chaque push sur `main` déclenche un build Jekyll → GitHub Pages |
 
-## 🚀 Déploiement
+## Stack technique
 
-Le site se déploie **automatiquement** à chaque push sur `main` :
+- **Générateur** : [Jekyll](https://jekyllrb.com/) (site statique)
+- **Hébergement** : GitHub Pages (gratuit, HTTPS)
+- **CI/CD** : GitHub Actions (déploiement automatique)
+- **Formulaire** : FormSubmit.co (sans backend)
+- **Icônes** : Font Awesome 6.5 (subset 39 icônes — 2.6 Ko)
+- **Typographies** : Playfair Display + Inter (Google Fonts)
+- **0 framework JS** — JavaScript vanilla (~7 Ko total)
+
+## Performance
+
+| Métrique | Valeur |
+|---|---|
+| Poids total du site | < 600 Ko |
+| CSS | 38.7 Ko (design system avec variables CSS) |
+| JavaScript | 6.8 Ko (vanilla, zéro dépendance) |
+| Font Awesome | 2.6 Ko subset (vs 100 Ko CDN complet) |
+| Images | Optimisées retina, compressées |
+| Preload | CSS + fonts critiques |
+
+## Charte graphique
+
+| Couleur | Hex | Usage |
+|---|---|---|
+| Vert profond | `#122A1A` | Couleur principale, textes, header, footer |
+| Vert menthe | `#BFFFB5` | Accents visuels, boutons CTA |
+| Vert soutenu | `#357248` | Labels, liens, citations |
+| Fond clair | `#F7FAF7` | Arrière-plan principal |
+
+**Typographies** : Playfair Display (titres) · Inter (corps)
+
+## Gouvernance
+
+| Rôle | Nom | LinkedIn |
+|---|---|---|
+| Présidente | Pauline Maillard | [Profil](https://www.linkedin.com/in/pauline-maillard-090936138/) |
+| Vice-Président | Pierre Béal | [Profil](https://www.linkedin.com/in/pierre-beal-02600416/) |
+| Vice-Président | Roland Cathebras | [Profil](https://www.linkedin.com/in/roland-cathebras-3b5691100/) |
+
+## Structure du projet
+
 ```
-push → GitHub Actions → Jekyll build → GitHub Pages
+├── _config.yml              # Configuration Jekyll
+├── _layouts/                # Templates (default, post, ressource)
+├── _includes/               # Composants (header, footer)
+├── _posts/                  # Articles de blog (Markdown)
+├── _ressources/             # Ressources espace membres (Markdown)
+├── assets/
+│   ├── css/
+│   │   ├── style.css        # Design system (~2000 lignes)
+│   │   └── fontawesome-subset.css  # 39 icônes (2.6 Ko)
+│   ├── images/              # Logo, photos équipe, OG image
+│   └── js/
+│       ├── main.js          # Navigation, animations, filtres
+│       └── auth.js          # Authentification espace membres
+├── pages/                   # Contact, espace membres, merci
+├── index.html               # Page d'accueil
+├── favicon.ico              # Favicon généré depuis le logo
+└── .github/workflows/       # CI/CD GitHub Actions
 ```
 
-Le workflow est dans `.github/workflows/deploy.yml`. GitHub Pages est configuré en source **GitHub Actions**.
+## Développement local
 
-## 📝 Ajouter du contenu
+```bash
+bundle install
+bundle exec jekyll serve --baseurl "" --host 0.0.0.0
+```
 
-### Nouvel article (blog)
-Créer un fichier dans `_posts/` nommé `YYYY-MM-DD-titre.md` :
+Le site est accessible sur `http://localhost:4000/`
+
+## Ajouter du contenu
+
+### Nouvel article
+
+Créer un fichier `_posts/YYYY-MM-DD-titre.md` :
 
 ```yaml
 ---
@@ -72,7 +117,8 @@ excerpt_text: "Résumé court"
 Contenu en Markdown...
 ```
 
-### Nouvelle ressource (espace membres)
+### Nouvelle ressource membres
+
 Créer un fichier dans `_ressources/` :
 
 ```yaml
@@ -81,63 +127,14 @@ title: "Titre de la ressource"
 date: 2026-03-01
 type: article  # ou "video" ou "document"
 description: "Description courte"
-youtube_id: "ID_VIDEO"  # uniquement pour type: video
+youtube_id: "ID_VIDEO"  # pour les vidéos uniquement
 ---
 
 Contenu en Markdown...
 ```
 
-Après commit + push, le contenu apparaît automatiquement sur le site.
+Après `git push`, le contenu apparaît automatiquement sur le site.
 
-## 🔑 Espace membres
+---
 
-| | |
-|---|---|
-| **Mot de passe** | `nature2026` |
-| **Fichier à modifier** | `assets/js/auth.js` |
-| **Durée de session** | 7 jours (localStorage) |
-
-## 🎨 Charte graphique
-
-| Couleur | Hex | Usage | Contraste sur fond clair |
-|---|---|---|---|
-| Vert profond | `#122A1A` | Couleur principale, texte, header/hero/footer | 14.56:1 ✅ |
-| Vert menthe | `#BFFFB5` | Accents visuels, boutons CTA (texte foncé dessus) | — |
-| Vert soutenu | `#357248` | Labels, overlines, citations, liens (texte sur clair) | 5.47:1 ✅ |
-| Vert moyen | `#469868` | Puces, accents légers | 3.53:1 ✅ |
-| Texte principal | `#1E2D24` | Corps de texte | 13.72:1 ✅ |
-| Texte secondaire | `#4A6355` | Sous-titres, descriptions | 6.23:1 ✅ |
-| Texte atténué | `#567064` | Métadonnées, dates | 5.12:1 ✅ |
-| Fond clair | `#F7FAF7` | Arrière-plan principal | — |
-
-**Typographies** : Playfair Display (titres) + Inter (corps)
-
-**Logo** : SVG dans `assets/images/` — variante sombre (`logo.svg`) et claire (`logo-light.svg`)
-
-## 📁 Structure du projet
-
-```
-├── _config.yml           # Configuration Jekyll
-├── _layouts/             # Templates HTML (default, post, ressource)
-├── _includes/            # Composants (header, footer)
-├── _posts/               # Articles de blog (Markdown)
-├── _ressources/          # Ressources membres (Markdown)
-├── assets/
-│   ├── css/style.css     # Design system complet (~2000 lignes)
-│   ├── images/           # Logo SVG (dark + light)
-│   └── js/
-│       ├── main.js       # Navigation, animations, filtres, a11y
-│       └── auth.js       # Authentification espace membres
-├── pages/                # Pages statiques (contact, membres, merci)
-├── index.html            # Page d'accueil
-└── .github/workflows/    # CI/CD GitHub Actions
-```
-
-## 🛠 Développement local
-
-```bash
-bundle install
-bundle exec jekyll serve --baseurl ""
-```
-
-Le site est accessible sur `http://localhost:4000/`
+**Contact** : pauline@reseaufinancenature.org
