@@ -1,0 +1,60 @@
+---
+layout: default
+body_class: ressource-page
+---
+<div class="protected-content" id="protectedContent" style="display:none;">
+  <article class="ressource">
+    <div class="container">
+      <div class="ressource-header">
+        <div class="ressource-meta">
+          {% if page.type == "video" %}
+          <span class="ressource-type ressource-type--video"><i class="fas fa-play-circle"></i> Vidéo</span>
+          {% elsif page.type == "article" %}
+          <span class="ressource-type ressource-type--article"><i class="fas fa-file-alt"></i> Article</span>
+          {% elsif page.type == "document" %}
+          <span class="ressource-type ressource-type--document"><i class="fas fa-file-pdf"></i> Document</span>
+          {% else %}
+          <span class="ressource-type"><i class="fas fa-bookmark"></i> Ressource</span>
+          {% endif %}
+          <span class="ressource-date"><i class="far fa-calendar-alt"></i> {{ page.date | date: "%d %B %Y" }}</span>
+        </div>
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="ressource-description">{{ page.description }}</p>
+        {% endif %}
+      </div>
+      
+      {% if page.youtube_id %}
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/{{ page.youtube_id }}" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+      {% endif %}
+      
+      <div class="ressource-content prose">
+        {{ content }}
+      </div>
+      
+      <div class="ressource-footer">
+        <a href="{{ '/espace-membres/' | relative_url }}" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Retour aux ressources</a>
+      </div>
+    </div>
+  </article>
+</div>
+
+<div class="login-gate" id="loginGate">
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-icon"><i class="fas fa-lock"></i></div>
+      <h2>Espace Membres</h2>
+      <p>Cette ressource est réservée aux membres du Réseau Finance & Nature.</p>
+      <form id="loginForm" class="login-form">
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" name="password" placeholder="Entrez le mot de passe membre" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Accéder <i class="fas fa-arrow-right"></i></button>
+      </form>
+      <p class="login-help">Vous n'avez pas le mot de passe ? <a href="{{ '/contact/' | relative_url }}">Contactez-nous</a> pour rejoindre le réseau.</p>
+    </div>
+  </div>
+</div>

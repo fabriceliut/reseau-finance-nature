@@ -1,0 +1,112 @@
+---
+layout: default
+title: Contact
+body_class: contact-page
+permalink: /contact/
+---
+
+<div class="contact-page">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info fade-up">
+        <h1>Contactez-nous</h1>
+        <p>
+          Vous souhaitez en savoir plus sur le Réseau Finance Nature, rejoindre nos membres ou nous présenter un projet ? Remplissez le formulaire et nous vous recontacterons rapidement.
+        </p>
+        
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:pauline@reseaufinancenature.org">pauline@reseaufinancenature.org</a>
+          </div>
+        </div>
+        
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><i class="fas fa-users"></i></div>
+          <div>
+            <h4>Pour qui ?</h4>
+            <p>Établissements bancaires, sociétés de gestion, family offices, réseaux de Business Angels et tout acteur financier territorial.</p>
+          </div>
+        </div>
+        
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><i class="fas fa-clock"></i></div>
+          <div>
+            <h4>Délai de réponse</h4>
+            <p>Nous nous engageons à vous répondre sous 48h ouvrées.</p>
+          </div>
+        </div>
+
+        <div class="contact-also">
+          <h4>Vous êtes aussi :</h4>
+          <ul>
+            <li><i class="fas fa-user-tie"></i> Un <strong>consultant spécialisé</strong> ? Écrivez-nous.</li>
+            <li><i class="fas fa-tree"></i> Une <strong>association ou entreprise à mission</strong> de conservation et restauration ? Écrivez-nous.</li>
+            <li><i class="fas fa-briefcase"></i> Une <strong>entreprise qui lève des fonds</strong> pour un projet positif pour la nature ? Écrivez-nous.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="contact-form-card fade-up">
+        <form action="https://formsubmit.co/pauline@reseaufinancenature.org" method="POST">
+          <!-- FormSubmit config -->
+          <input type="hidden" name="_subject" value="Nouveau contact — Réseau Finance Nature">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_template" value="box">
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/contact/merci/">
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nom">Nom *</label>
+              <input type="text" id="nom" name="Nom" required placeholder="Votre nom">
+            </div>
+            <div class="form-group">
+              <label for="prenom">Prénom *</label>
+              <input type="text" id="prenom" name="Prénom" required placeholder="Votre prénom">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="structure">Structure *</label>
+            <input type="text" id="structure" name="Structure" required placeholder="Nom de votre structure">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Adresse mail *</label>
+            <input type="email" id="email" name="Email" required placeholder="votre@email.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="Téléphone" placeholder="Votre numéro de téléphone">
+          </div>
+          
+          <div class="form-group">
+            <label for="sujet">Sujet *</label>
+            <select id="sujet" name="Sujet" required>
+              <option value="" disabled selected>Sélectionnez un sujet</option>
+              <option value="adhesion">Adhérer au réseau</option>
+              <option value="information">Demande d'information</option>
+              <option value="consultant">Je suis consultant spécialisé</option>
+              <option value="association">Je représente une association / entreprise à mission</option>
+              <option value="projet">Présenter un projet de financement</option>
+              <option value="partenariat">Proposer un partenariat</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" placeholder="Décrivez brièvement votre intérêt ou vos questions..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-full">
+            Envoyer <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

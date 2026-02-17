@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<article class="post">
+  <div class="container">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="post-date"><i class="far fa-calendar-alt"></i> {{ page.date | date: "%d %B %Y" }}</span>
+        {% if page.category %}
+        <span class="post-category"><i class="far fa-folder"></i> {{ page.category }}</span>
+        {% endif %}
+        {% if page.author %}
+        <span class="post-author"><i class="far fa-user"></i> {{ page.author }}</span>
+        {% endif %}
+      </div>
+      <h1>{{ page.title }}</h1>
+      {% if page.excerpt_text %}
+      <p class="post-subtitle">{{ page.excerpt_text }}</p>
+      {% endif %}
+    </div>
+    <div class="post-content prose">
+      {{ content }}
+    </div>
+    <div class="post-footer">
+      <a href="{{ '/' | relative_url }}#actualites" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Retour aux actualités</a>
+    </div>
+  </div>
+</article>

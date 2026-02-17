@@ -1,0 +1,36 @@
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="{{ '/' | relative_url }}" class="logo" aria-label="Accueil Réseau Finance & Nature">
+      <div class="logo-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="42" height="42">
+          <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M24 8C24 8 18 16 18 24C18 28 20 32 24 36C28 32 30 28 30 24C30 16 24 8 24 8Z" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M24 18V36" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M24 24C21 21 18 22 16 24" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M24 28C27 25 30 26 32 28" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">Réseau</span>
+        <span class="logo-name-bold">Finance & Nature</span>
+      </div>
+    </a>
+    
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}#qui-sommes-nous">Qui sommes-nous</a></li>
+        <li><a href="{{ '/' | relative_url }}#missions">Missions</a></li>
+        <li><a href="{{ '/' | relative_url }}#adhesion">Adhésion</a></li>
+        <li><a href="{{ '/' | relative_url }}#gouvernance">Gouvernance</a></li>
+        <li><a href="{{ '/espace-membres/' | relative_url }}" class="nav-members"><i class="fas fa-leaf"></i> Espace Membres</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}" class="btn btn-nav">Nous contacter</a></li>
+      </ul>
+    </nav>
+    
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>

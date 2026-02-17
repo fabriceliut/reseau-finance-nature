@@ -1,0 +1,44 @@
+title: Réseau Finance & Nature
+description: "Association loi 1901 fédérant les acteurs financiers territoriaux pour sensibiliser aux enjeux de la nature et mobiliser les financements privés en faveur de projets à impact positif pour la nature et les territoires."
+url: "https://fabriceliut.github.io"
+baseurl: "/reseau-finance-nature"
+lang: fr
+
+# Build
+markdown: kramdown
+permalink: /blog/:title/
+sass:
+  style: compressed
+
+# Collections
+collections:
+  ressources:
+    output: true
+    permalink: /espace-membres/ressources/:title/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      category: "article"
+  - scope:
+      path: ""
+      type: "ressources"
+    values:
+      layout: "ressource"
+      protected: true
+
+# Plugins (GitHub Pages compatible)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
