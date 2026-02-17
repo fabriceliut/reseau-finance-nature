@@ -1950,30 +1950,62 @@ h4 { font-size: 1.1rem; }
   border-top: 1px solid var(--color-border);
 }
 
-.contact-also h4 {
-  font-family: var(--font-body);
-  font-weight: 600;
-  margin-bottom: var(--space-sm);
+.contact-also-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
 }
 
-.contact-also ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.contact-also-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
 }
 
-.contact-also li {
-  font-size: 0.88rem;
-  color: var(--color-text-light);
+.contact-also-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.contact-also-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-also-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto var(--space-xs);
+  font-size: 1rem;
 }
 
-.contact-also li i {
-  color: var(--color-accent);
-  width: 18px;
-  text-align: center;
+.contact-also-card p {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.contact-also-card strong {
+  color: var(--color-primary);
+}
+
+@media (max-width: 600px) {
+  .contact-also-cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* --- Responsive additions --- */
