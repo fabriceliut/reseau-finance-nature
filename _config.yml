@@ -3,6 +3,7 @@ description: "Association loi 1901 fédérant les acteurs financiers territoriau
 url: "https://fabriceliut.github.io"
 baseurl: "/reseau-finance-nature"
 lang: fr
+image: /assets/images/og-image.png
 
 # Build
 markdown: kramdown
