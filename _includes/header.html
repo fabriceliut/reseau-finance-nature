@@ -8,18 +8,18 @@
       </div>
     </a>
     
-    <nav class="main-nav" id="mainNav">
+    <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
       <ul>
         <li><a href="{{ '/' | relative_url }}#qui-sommes-nous">Qui sommes-nous</a></li>
         <li><a href="{{ '/' | relative_url }}#missions">Missions</a></li>
         <li><a href="{{ '/' | relative_url }}#adhesion">Adhésion</a></li>
         <li><a href="{{ '/' | relative_url }}#gouvernance">Gouvernance</a></li>
-        <li><a href="{{ '/espace-membres/' | relative_url }}" class="nav-members"><i class="fas fa-leaf"></i> Espace Membres</a></li>
+        <li><a href="{{ '/espace-membres/' | relative_url }}" class="nav-members"><i class="fas fa-leaf" aria-hidden="true"></i> Espace Membres</a></li>
         <li><a href="{{ '/contact/' | relative_url }}" class="btn btn-nav">Nous contacter</a></li>
       </ul>
     </nav>
     
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
       <span></span>
       <span></span>
       <span></span>

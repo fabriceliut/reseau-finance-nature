@@ -10,9 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
       toggle.classList.toggle('open');
-      nav.classList.toggle('open');
-      document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+      toggle.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
     
     // Close on link click
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => {
         toggle.classList.remove('open');
         nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       });
     });
@@ -61,8 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', () => {
         const filter = btn.dataset.filter;
         
-        filterBtns.forEach(b => b.classList.remove('active'));
+        filterBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
         
         resourceCards.forEach(card => {
           if (filter === 'all' || card.dataset.type === filter) {

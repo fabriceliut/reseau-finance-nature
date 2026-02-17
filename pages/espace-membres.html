@@ -14,11 +14,11 @@ protected: true
           <h1>Espace Ressources</h1>
           <p style="color: var(--color-text-light); margin-top: 0.25rem;">Ressources exclusives pour les membres du réseau</p>
         </div>
-        <div class="resource-filters">
-          <button class="filter-btn active" data-filter="all">Tout</button>
-          <button class="filter-btn" data-filter="article"><i class="fas fa-file-alt"></i> Articles</button>
-          <button class="filter-btn" data-filter="video"><i class="fas fa-play-circle"></i> Vidéos</button>
-          <button class="filter-btn" data-filter="document"><i class="fas fa-file-pdf"></i> Documents</button>
+        <div class="resource-filters" role="group" aria-label="Filtrer par type">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">Tout</button>
+          <button class="filter-btn" data-filter="article" aria-pressed="false"><i aria-hidden="true" class="fas fa-file-alt"></i> Articles</button>
+          <button class="filter-btn" data-filter="video" aria-pressed="false"><i aria-hidden="true" class="fas fa-play-circle"></i> Vidéos</button>
+          <button class="filter-btn" data-filter="document" aria-pressed="false"><i aria-hidden="true" class="fas fa-file-pdf"></i> Documents</button>
         </div>
       </div>
       
@@ -30,13 +30,13 @@ protected: true
           <div class="resource-card-body">
             <div class="resource-card-type">
               {% if resource.type == "video" %}
-              <i class="fas fa-play-circle"></i> Vidéo
+              <i aria-hidden="true" class="fas fa-play-circle"></i> Vidéo
               {% elsif resource.type == "article" %}
-              <i class="fas fa-file-alt"></i> Article
+              <i aria-hidden="true" class="fas fa-file-alt"></i> Article
               {% elsif resource.type == "document" %}
-              <i class="fas fa-file-pdf"></i> Document
+              <i aria-hidden="true" class="fas fa-file-pdf"></i> Document
               {% else %}
-              <i class="fas fa-bookmark"></i> Ressource
+              <i aria-hidden="true" class="fas fa-bookmark"></i> Ressource
               {% endif %}
             </div>
             <h3>{{ resource.title }}</h3>
@@ -49,7 +49,7 @@ protected: true
 
       {% if site.ressources.size == 0 %}
       <div style="text-align: center; padding: 4rem 0; color: var(--color-text-muted);">
-        <i class="fas fa-folder-open" style="font-size: 2.5rem; margin-bottom: 1rem; display: block;"></i>
+        <i aria-hidden="true" class="fas fa-folder-open" style="font-size: 2.5rem; margin-bottom: 1rem; display: block;"></i>
         <p>Les ressources seront bientôt disponibles.</p>
       </div>
       {% endif %}
@@ -57,21 +57,21 @@ protected: true
   </div>
 </div>
 
-<div class="login-gate" id="loginGate">
+<section class="login-gate" id="loginGate" aria-label="Connexion espace membres">
   <div class="login-container">
     <div class="login-card">
-      <div class="login-icon"><i class="fas fa-lock"></i></div>
+      <div class="login-icon"><i aria-hidden="true" class="fas fa-lock"></i></div>
       <h2>Espace Membres</h2>
       <p>Accédez aux ressources exclusives du Réseau Finance & Nature.</p>
-      <div class="login-error" id="loginError">Mot de passe incorrect. Veuillez réessayer.</div>
+      <div class="login-error" id="loginError" role="alert" aria-live="assertive">Mot de passe incorrect. Veuillez réessayer.</div>
       <form id="loginForm" class="login-form">
         <div class="form-group">
           <label for="password">Mot de passe</label>
           <input type="password" id="password" name="password" placeholder="Entrez le mot de passe membre" required>
         </div>
-        <button type="submit" class="btn btn-primary btn-full">Accéder <i class="fas fa-arrow-right"></i></button>
+        <button type="submit" class="btn btn-primary btn-full">Accéder <i aria-hidden="true" class="fas fa-arrow-right"></i></button>
       </form>
       <p class="login-help">Vous n'avez pas le mot de passe ? <a href="{{ '/contact/' | relative_url }}">Contactez-nous</a> pour rejoindre le réseau.</p>
     </div>
   </div>
-</div>
+</section>

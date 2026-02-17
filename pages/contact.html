@@ -15,46 +15,46 @@ permalink: /contact/
         </p>
         
         <div class="contact-detail">
-          <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-detail-icon"><i aria-hidden="true" class="fas fa-envelope"></i></div>
           <div>
-            <h4>Email</h4>
+            <h2 class="contact-detail-title">Email</h2>
             <a href="mailto:pauline@reseaufinancenature.org">pauline@reseaufinancenature.org</a>
           </div>
         </div>
         
         <div class="contact-detail">
-          <div class="contact-detail-icon"><i class="fas fa-users"></i></div>
+          <div class="contact-detail-icon"><i aria-hidden="true" class="fas fa-users"></i></div>
           <div>
-            <h4>Pour qui ?</h4>
+            <h2 class="contact-detail-title">Pour qui ?</h2>
             <p>Établissements bancaires, sociétés de gestion, family offices, réseaux de Business Angels et tout acteur financier territorial.</p>
           </div>
         </div>
         
         <div class="contact-detail">
-          <div class="contact-detail-icon"><i class="fas fa-clock"></i></div>
+          <div class="contact-detail-icon"><i aria-hidden="true" class="fas fa-clock"></i></div>
           <div>
-            <h4>Délai de réponse</h4>
+            <h2 class="contact-detail-title">Délai de réponse</h2>
             <p>Nous nous engageons à vous répondre sous 48h ouvrées.</p>
           </div>
         </div>
 
         <div class="contact-also">
-          <h4>Vous êtes aussi :</h4>
+          <h2 class="contact-detail-title">Vous êtes aussi :</h2>
           <ul>
-            <li><i class="fas fa-user-tie"></i> Un <strong>consultant spécialisé</strong> ? Écrivez-nous.</li>
-            <li><i class="fas fa-tree"></i> Une <strong>association ou entreprise à mission</strong> de conservation et restauration ? Écrivez-nous.</li>
-            <li><i class="fas fa-briefcase"></i> Une <strong>entreprise qui lève des fonds</strong> pour un projet positif pour la nature ? Écrivez-nous.</li>
+            <li><i aria-hidden="true" class="fas fa-user-tie"></i> Un <strong>consultant spécialisé</strong> ? Écrivez-nous.</li>
+            <li><i aria-hidden="true" class="fas fa-tree"></i> Une <strong>association ou entreprise à mission</strong> de conservation et restauration ? Écrivez-nous.</li>
+            <li><i aria-hidden="true" class="fas fa-briefcase"></i> Une <strong>entreprise qui lève des fonds</strong> pour un projet positif pour la nature ? Écrivez-nous.</li>
           </ul>
         </div>
       </div>
       
       <div class="contact-form-card fade-up">
-        <form action="https://formsubmit.co/pauline@reseaufinancenature.org" method="POST">
+        <form action="https://formsubmit.co/pauline@reseaufinancenature.org" method="POST" aria-label="Formulaire de contact">
           <!-- FormSubmit config -->
           <input type="hidden" name="_subject" value="Nouveau contact — Réseau Finance Nature">
           <input type="hidden" name="_captcha" value="true">
           <input type="hidden" name="_template" value="box">
-          <input type="text" name="_honey" style="display:none">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" aria-hidden="true" autocomplete="off">
           <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/contact/merci/">
           
           <div class="form-row">
@@ -103,7 +103,7 @@ permalink: /contact/
           </div>
           
           <button type="submit" class="btn btn-primary btn-full">
-            Envoyer <i class="fas fa-paper-plane"></i>
+            Envoyer <i aria-hidden="true" class="fas fa-paper-plane"></i>
           </button>
         </form>
       </div>

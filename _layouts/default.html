@@ -20,9 +20,10 @@
   {% seo %}
 </head>
 <body class="{{ page.body_class }}">
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
   {% include header.html %}
   
-  <main>
+  <main id="main-content">
     {{ content }}
   </main>
   

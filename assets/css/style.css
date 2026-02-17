@@ -12,8 +12,8 @@
   --color-primary-dark: #0A1A10;
   --color-secondary: #BFFFB5;
   --color-secondary-light: #D4FFCE;
-  --color-accent: #3A7D52;
-  --color-accent-light: #7BC496;
+  --color-accent: #357248;
+  --color-accent-light: #469868;
   
   /* Neutres */
   --color-bg: #F7FAF7;
@@ -21,7 +21,7 @@
   --color-bg-dark: #0A1A10;
   --color-text: #1E2D24;
   --color-text-light: #4A6355;
-  --color-text-muted: #8A9E90;
+  --color-text-muted: #567064;
   --color-white: #FFFFFF;
   --color-border: #D4E0D8;
   
@@ -86,6 +86,46 @@ a:hover {
 }
 
 ul { list-style: none; }
+
+/* --- Skip Link (A11y) --- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-md);
+  z-index: 9999;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: var(--space-sm);
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* --- Focus Visible (A11y) --- */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(18, 42, 26, 0.12);
+}
 
 /* --- Container --- */
 .container {
@@ -804,7 +844,8 @@ h4 { font-size: 1.1rem; }
   flex-shrink: 0;
 }
 
-.contact-detail h4 {
+.contact-detail h4,
+.contact-detail-title {
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 600;
@@ -842,7 +883,7 @@ h4 { font-size: 1.1rem; }
 .form-group textarea {
   width: 100%;
   padding: 0.85rem 1rem;
-  border: 1.5px solid var(--color-border);
+  border: 1.5px solid #6B8C7A;
   border-radius: var(--radius);
   font-family: var(--font-body);
   font-size: 0.95rem;
@@ -854,7 +895,8 @@ h4 { font-size: 1.1rem; }
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  outline: none;
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
   border-color: var(--color-primary);
   background: var(--color-white);
   box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.08);
@@ -1169,6 +1211,7 @@ h4 { font-size: 1.1rem; }
   line-height: 1.7;
 }
 
+.footer-heading,
 .footer-links h4,
 .footer-contact h4 {
   color: var(--color-white);
