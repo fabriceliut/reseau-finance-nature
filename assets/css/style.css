@@ -293,29 +293,10 @@ h4 { font-size: 1.1rem; }
 .logo:hover { color: var(--color-primary); }
 
 .logo-img {
-  width: 44px;
-  height: 44px;
+  height: 48px;
+  width: auto;
   flex-shrink: 0;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
-
-.logo-name {
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  color: var(--color-text-light);
-  letter-spacing: 0.05em;
-}
-
-.logo-name-bold {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--color-primary);
+  border-radius: 6px;
 }
 
 .main-nav ul {
@@ -1195,15 +1176,10 @@ h4 { font-size: 1.1rem; }
 }
 
 .footer-logo-img {
-  width: 36px;
-  height: 36px;
+  height: 40px;
+  width: auto;
   flex-shrink: 0;
-}
-
-.footer-logo span {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1.05rem;
+  border-radius: 4px;
 }
 
 .footer-brand p {
