@@ -1,29 +1,29 @@
 /* =============================================
    RÉSEAU FINANCE & NATURE — Design System
-   Palette: Forêt profonde + Or discret
-   Audience: Financiers engagés, fonds d'impact
+   Palette: Vert profond #122A1A + Vert lumineux #BFFFB5
+   Audience: Acteurs financiers territoriaux
    ============================================= */
 
 /* --- Variables --- */
 :root {
   /* Couleurs principales */
-  --color-primary: #1B4332;
-  --color-primary-light: #2D6A4F;
-  --color-primary-dark: #0F2B1F;
-  --color-secondary: #C9A84C;
-  --color-secondary-light: #D4B96A;
-  --color-accent: #588157;
-  --color-accent-light: #A3B18A;
+  --color-primary: #122A1A;
+  --color-primary-light: #1E4230;
+  --color-primary-dark: #0A1A10;
+  --color-secondary: #BFFFB5;
+  --color-secondary-light: #D4FFCE;
+  --color-accent: #3A7D52;
+  --color-accent-light: #7BC496;
   
   /* Neutres */
-  --color-bg: #FAFAF5;
-  --color-bg-alt: #F0EFE7;
-  --color-bg-dark: #1A1A1A;
-  --color-text: #2D3436;
-  --color-text-light: #636E72;
-  --color-text-muted: #9BA3A7;
+  --color-bg: #F7FAF7;
+  --color-bg-alt: #EDF2ED;
+  --color-bg-dark: #0A1A10;
+  --color-text: #1E2D24;
+  --color-text-light: #4A6355;
+  --color-text-muted: #8A9E90;
   --color-white: #FFFFFF;
-  --color-border: #E0DFD5;
+  --color-border: #D4E0D8;
   
   /* Typo */
   --font-heading: 'Playfair Display', Georgia, serif;
@@ -82,7 +82,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-secondary);
+  color: var(--color-accent);
 }
 
 ul { list-style: none; }
@@ -161,11 +161,13 @@ h4 { font-size: 1.1rem; }
   background: var(--color-secondary);
   color: var(--color-primary-dark);
   border-color: var(--color-secondary);
+  font-weight: 600;
 }
 
 .btn-secondary:hover {
   background: var(--color-secondary-light);
   border-color: var(--color-secondary-light);
+  color: var(--color-primary-dark);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -193,6 +195,7 @@ h4 { font-size: 1.1rem; }
 
 .btn-nav:hover {
   background: var(--color-secondary-light);
+  color: var(--color-primary-dark) !important;
   transform: translateY(-1px);
 }
 
@@ -345,8 +348,8 @@ h4 { font-size: 1.1rem; }
   bottom: 0;
   left: 0;
   background: 
-    radial-gradient(ellipse at 80% 50%, rgba(201, 168, 76, 0.1) 0%, transparent 60%),
-    radial-gradient(ellipse at 20% 80%, rgba(88, 129, 87, 0.15) 0%, transparent 50%);
+    radial-gradient(ellipse at 80% 50%, rgba(191, 255, 181, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(58, 125, 82, 0.12) 0%, transparent 50%);
 }
 
 .hero-content {
@@ -361,10 +364,10 @@ h4 { font-size: 1.1rem; }
   align-items: center;
   gap: 0.5rem;
   padding: 0.4rem 1rem;
-  background: rgba(201, 168, 76, 0.15);
-  border: 1px solid rgba(201, 168, 76, 0.3);
+  background: rgba(191, 255, 181, 0.12);
+  border: 1px solid rgba(191, 255, 181, 0.3);
   border-radius: 50px;
-  color: var(--color-secondary-light);
+  color: var(--color-secondary);
   font-size: 0.85rem;
   font-weight: 500;
   margin-bottom: var(--space-md);
@@ -459,7 +462,7 @@ h4 { font-size: 1.1rem; }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-secondary);
+  color: var(--color-accent);
   margin-bottom: var(--space-sm);
 }
 
@@ -667,7 +670,7 @@ h4 { font-size: 1.1rem; }
 }
 
 .post-card:hover .post-card-link {
-  color: var(--color-secondary);
+  color: var(--color-accent);
 }
 
 /* --- Post single --- */
@@ -725,7 +728,7 @@ h4 { font-size: 1.1rem; }
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background: rgba(201, 168, 76, 0.08);
+  background: rgba(191, 255, 181, 0.06);
 }
 
 .cta-content {
@@ -1010,7 +1013,7 @@ h4 { font-size: 1.1rem; }
 }
 
 .resource-card[data-type="video"] .resource-card-accent { background: #E74C3C; }
-.resource-card[data-type="article"] .resource-card-accent { background: var(--color-secondary); }
+.resource-card[data-type="article"] .resource-card-accent { background: var(--color-accent); }
 .resource-card[data-type="document"] .resource-card-accent { background: var(--color-accent); }
 
 .resource-card-body {
@@ -1029,7 +1032,7 @@ h4 { font-size: 1.1rem; }
 }
 
 .resource-card[data-type="video"] .resource-card-type { color: #E74C3C; }
-.resource-card[data-type="article"] .resource-card-type { color: var(--color-secondary); }
+.resource-card[data-type="article"] .resource-card-type { color: var(--color-accent); }
 .resource-card[data-type="document"] .resource-card-type { color: var(--color-accent); }
 
 .resource-card h3 {
@@ -1080,7 +1083,7 @@ h4 { font-size: 1.1rem; }
 }
 
 .ressource-type--video { background: #FFF5F5; color: #E74C3C; }
-.ressource-type--article { background: #FFF9E6; color: var(--color-secondary); }
+.ressource-type--article { background: rgba(191, 255, 181, 0.2); color: var(--color-accent); }
 .ressource-type--document { background: #F0F9F4; color: var(--color-accent); }
 
 .ressource-date {
@@ -1206,6 +1209,7 @@ h4 { font-size: 1.1rem; }
 .footer-social a:hover {
   background: var(--color-secondary);
   color: var(--color-primary-dark);
+  font-weight: 600;
 }
 
 .footer-bottom {
@@ -1398,7 +1402,7 @@ h4 { font-size: 1.1rem; }
   font-size: 0.85rem;
   font-style: normal;
   font-weight: 600;
-  color: var(--color-secondary);
+  color: var(--color-accent);
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -1488,7 +1492,7 @@ h4 { font-size: 1.1rem; }
   flex-shrink: 0;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--color-secondary);
+  color: var(--color-accent);
   text-align: right;
   padding-top: var(--space-sm);
   line-height: 1.2;
@@ -1644,8 +1648,8 @@ h4 { font-size: 1.1rem; }
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: rgba(201, 168, 76, 0.1);
-  color: var(--color-secondary);
+  background: rgba(191, 255, 181, 0.2);
+  color: var(--color-accent);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1695,7 +1699,7 @@ h4 { font-size: 1.1rem; }
 }
 
 .cta-cards a:hover {
-  color: var(--color-secondary);
+  color: var(--color-accent);
 }
 
 /* --- Adhésion --- */
@@ -1861,8 +1865,8 @@ h4 { font-size: 1.1rem; }
 .team-role {
   display: inline-block;
   padding: 0.2rem 0.8rem;
-  background: rgba(201, 168, 76, 0.12);
-  color: var(--color-secondary);
+  background: rgba(191, 255, 181, 0.25);
+  color: var(--color-accent);
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
