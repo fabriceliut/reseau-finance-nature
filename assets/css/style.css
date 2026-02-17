@@ -1308,12 +1308,12 @@ h4 { font-size: 1.1rem; }
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(250, 250, 245, 0.98);
-    backdrop-filter: blur(12px);
+    background: var(--color-bg);
     padding: var(--space-xl) var(--space-md);
     transform: translateX(100%);
     transition: var(--transition);
     z-index: 999;
+    overflow-y: auto;
   }
   
   .main-nav.open {
