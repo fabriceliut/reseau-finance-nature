@@ -1330,11 +1330,14 @@ h4 { font-size: 1.1rem; }
     right: 0;
     bottom: 0;
     background: var(--color-bg);
-    padding: var(--space-xl) var(--space-md);
+    padding: var(--space-lg) var(--space-md);
     transform: translateX(100%);
     transition: var(--transition);
-    z-index: 999;
+    z-index: 1001;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: column;
   }
   
   .main-nav.open {
@@ -1343,18 +1346,28 @@ h4 { font-size: 1.1rem; }
   
   .main-nav ul {
     flex-direction: column;
-    gap: var(--space-md);
+    gap: 0;
     align-items: stretch;
+  }
+
+  .main-nav ul li {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .main-nav ul li:last-child {
+    border-bottom: none;
   }
   
   .main-nav a {
-    font-size: 1.1rem;
-    padding: var(--space-xs) 0;
+    font-size: 1.05rem;
+    padding: var(--space-sm) 0;
+    display: block;
   }
   
   .btn-nav {
     text-align: center;
     display: block;
+    margin-top: var(--space-sm);
   }
   
   .hero {
