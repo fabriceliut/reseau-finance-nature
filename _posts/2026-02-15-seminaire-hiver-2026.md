@@ -2,11 +2,11 @@
 title: "Retour sur notre séminaire d'hiver 2026"
 date: 2026-02-15
 category: événement
-author: Réseau Finance & Nature
+author: Réseau Finance Nature
 excerpt_text: "25 membres se sont réunis pour explorer les nouvelles frontières de l'investissement régénératif. Retour sur les temps forts."
 ---
 
-Le 6 février dernier, le Réseau Finance & Nature a tenu son **séminaire d'hiver** rassemblant 25 membres dans un cadre propice aux échanges approfondis.
+Le 6 février dernier, le Réseau Finance Nature a tenu son **séminaire d'hiver** rassemblant 25 membres dans un cadre propice aux échanges approfondis.
 
 ## Les temps forts
 

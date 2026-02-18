@@ -1,5 +1,5 @@
 /* =============================================
-   Réseau Finance & Nature — Auth (Members Area)
+   Réseau Finance Nature — Auth (Members Area)
    Simple client-side password protection
    
    DEFAULT PASSWORD: "nature2026"

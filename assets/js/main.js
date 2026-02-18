@@ -1,5 +1,5 @@
 /* =============================================
-   Réseau Finance & Nature — Main JS
+   Réseau Finance Nature — Main JS
    Navigation, animations, filters
    ============================================= */
 

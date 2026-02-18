@@ -2,7 +2,7 @@
 title: "TNFD : ce que les investisseurs doivent savoir"
 date: 2026-01-20
 category: analyse
-author: Réseau Finance & Nature
+author: Réseau Finance Nature
 excerpt_text: "Le cadre TNFD (Taskforce on Nature-related Financial Disclosures) s'impose progressivement. Décryptage pour les investisseurs."
 ---
 
@@ -27,4 +27,4 @@ Pour les gestionnaires d'actifs et les fonds d'investissement, le TNFD implique 
 
 ## Notre accompagnement
 
-Le Réseau Finance & Nature accompagne ses membres dans l'appropriation du cadre TNFD à travers des ateliers pratiques et un partage d'expérience entre pairs.
+Le Réseau Finance Nature accompagne ses membres dans l'appropriation du cadre TNFD à travers des ateliers pratiques et un partage d'expérience entre pairs.

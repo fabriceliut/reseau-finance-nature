@@ -3,7 +3,7 @@ title: "Conférence : Finance régénérative – Vers un nouveau paradigme"
 date: 2026-01-15
 type: video
 youtube_id: "dQw4w9WgXcQ"
-description: "Replay de la conférence inaugurale du Réseau Finance & Nature sur les principes de la finance régénérative et son application concrète."
+description: "Replay de la conférence inaugurale du Réseau Finance Nature sur les principes de la finance régénérative et son application concrète."
 ---
 
 ## À propos de cette conférence

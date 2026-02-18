@@ -2,7 +2,7 @@
 title: "Pourquoi la biodiversité est un enjeu financier majeur"
 date: 2026-02-10
 category: article
-author: Réseau Finance & Nature
+author: Réseau Finance Nature
 excerpt_text: "Plus de la moitié du PIB mondial dépend de la nature. Pour les investisseurs, ignorer la biodiversité revient à ignorer un risque systémique."
 ---
 
@@ -22,7 +22,7 @@ Face à ces risques, une nouvelle classe d'opportunités émerge. Les solutions 
 
 > « La question n'est plus de savoir si la finance doit intégrer la biodiversité, mais comment le faire efficacement. » 
 
-## Le rôle du Réseau Finance & Nature
+## Le rôle du Réseau Finance Nature
 
 C'est précisément pour répondre à cette question que notre réseau existe. En réunissant des acteurs financiers convaincus, nous accélérons le partage de bonnes pratiques et la structuration de véhicules d'investissement adaptés.
 

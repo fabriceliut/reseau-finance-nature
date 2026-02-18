@@ -7,7 +7,7 @@ description: "Document de synthèse sur le paysage de la finance biodiversité e
 
 ## Synthèse — Finance & Biodiversité en France
 
-Ce document de synthèse, élaboré par le Réseau Finance & Nature, dresse un **état des lieux complet** du paysage de la finance biodiversité en France en 2026.
+Ce document de synthèse, élaboré par le Réseau Finance Nature, dresse un **état des lieux complet** du paysage de la finance biodiversité en France en 2026.
 
 ### 1. Le contexte réglementaire
 
@@ -33,7 +33,7 @@ Le paysage français compte désormais :
 
 ### 4. Perspectives
 
-Le Réseau Finance & Nature identifie trois priorités pour la période 2026-2030 :
+Le Réseau Finance Nature identifie trois priorités pour la période 2026-2030 :
 
 1. Harmoniser les métriques de mesure d'impact biodiversité
 2. Développer des véhicules d'investissement innovants (blended finance)
