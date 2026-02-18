@@ -931,11 +931,11 @@ h4 { font-size: 1.1rem; }
 }
 
 .login-gate {
-  min-height: 70vh;
+  min-height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: var(--header-height);
+  padding-top: 0;
 }
 
 .login-container {
