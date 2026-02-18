@@ -1188,10 +1188,18 @@ h4 { font-size: 1.1rem; }
 }
 
 .footer-logo-img {
-  height: 40px;
+  height: 60px;
   width: auto;
   flex-shrink: 0;
   border-radius: 4px;
+}
+
+.footer-tagline {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--color-secondary);
+  margin-bottom: var(--space-sm);
 }
 
 .footer-brand p {
@@ -1981,9 +1989,9 @@ h4 { font-size: 1.1rem; }
 .contact-callout {
   margin-top: var(--space-lg);
   padding: var(--space-md) var(--space-lg);
-  background: var(--color-secondary);
+  background: #D0E4D2;
   border-radius: var(--radius);
-  border-left: 4px solid var(--color-primary);
+  border-left: 4px solid var(--color-accent);
 }
 
 .contact-callout p {
