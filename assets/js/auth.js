@@ -11,7 +11,7 @@
 
 (function() {
   // SHA-256 hash of "nature2026"
-  const VALID_HASH = '9f2feb700834751d067fca5250799031e tried39f8ca12b888e4c8b6b4ce0ba98b';
+  const VALID_HASH = '22cc6418d17f474839e8c4d010bf347bf882bcf42309327b2e23b822ca7036c4';
   const STORAGE_KEY = 'rfn_auth';
   const SESSION_DURATION = 7 * 24 * 60 * 60 * 1000; // 7 days
   
@@ -71,10 +71,7 @@
       
       const hash = await hashPassword(password);
       
-      // Accept the password "nature2026" or any password for simplicity
-      // In production, compare with VALID_HASH
-      // For now, accept "nature2026" directly for easy setup
-      if (password === 'nature2026') {
+      if (hash === VALID_HASH) {
         // Store session
         localStorage.setItem(STORAGE_KEY, JSON.stringify({
           expires: Date.now() + SESSION_DURATION
@@ -87,24 +84,7 @@
         }
         passwordInput.value = '';
         passwordInput.focus();
-        
-        // Shake animation
-        loginForm.style.animation = 'shake 0.5s ease';
-        setTimeout(() => loginForm.style.animation = '', 500);
       }
     });
   }
-  
-  // Add shake animation
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      20% { transform: translateX(-8px); }
-      40% { transform: translateX(8px); }
-      60% { transform: translateX(-4px); }
-      80% { transform: translateX(4px); }
-    }
-  `;
-  document.head.appendChild(style);
 })();

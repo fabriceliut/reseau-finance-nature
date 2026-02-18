@@ -445,7 +445,6 @@ h4 { font-size: 1.1rem; }
   position: absolute;
   right: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 380px;
   max-width: 40%;
@@ -456,8 +455,6 @@ h4 { font-size: 1.1rem; }
 .hero-logo-img {
   width: 100%;
   height: auto;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
 }
 
 /* Decorative leaf motif */
@@ -1000,6 +997,14 @@ h4 { font-size: 1.1rem; }
   font-size: 0.85rem;
   margin-bottom: var(--space-sm);
   display: none;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
 }
 
 /* --- Resource cards (members) --- */
