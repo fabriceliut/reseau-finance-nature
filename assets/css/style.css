@@ -324,6 +324,10 @@ h4 { font-size: 1.1rem; }
   padding: 0.25rem 0;
 }
 
+.main-nav a.btn-nav {
+  padding: 0.9rem 3.2rem;
+}
+
 .main-nav a:not(.btn-nav):hover {
   color: var(--color-primary);
 }
@@ -355,6 +359,8 @@ h4 { font-size: 1.1rem; }
   border: none;
   cursor: pointer;
   padding: 8px;
+  position: relative;
+  z-index: 1003;
 }
 
 .mobile-toggle span {
