@@ -45,6 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (prefersReducedMotion) {
       fadeEls.forEach(el => el.classList.add('visible'));
     } else {
+      // Enable animations now that JS is confirmed running
+      document.body.classList.add('js-ready');
+
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, i) => {
           if (entry.isIntersecting) {
@@ -57,6 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
       
       fadeEls.forEach(el => observer.observe(el));
+
+      // Safety net: force all visible after 4s in case observer misses any
+      setTimeout(() => {
+        fadeEls.forEach(el => el.classList.add('visible'));
+      }, 4000);
     }
   }
   

@@ -1300,13 +1300,19 @@ h4 { font-size: 1.1rem; }
 }
 
 /* --- Animations --- */
+/* Elements are visible by default; animation only activates once JS is ready */
 .fade-up {
+  opacity: 1;
+  transform: none;
+}
+
+.js-ready .fade-up {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.fade-up.visible {
+.js-ready .fade-up.visible {
   opacity: 1;
   transform: translateY(0);
 }
