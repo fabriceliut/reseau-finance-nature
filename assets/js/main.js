@@ -45,8 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (prefersReducedMotion) {
       fadeEls.forEach(el => el.classList.add('visible'));
     } else {
-      // Enable animations now that JS is confirmed running
-      document.body.classList.add('js-ready');
+      // Hide elements via inline style, then reveal with observer
+      fadeEls.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      });
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, i) => {
@@ -58,13 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-      
+
       fadeEls.forEach(el => observer.observe(el));
 
-      // Safety net: force all visible after 4s in case observer misses any
+      // Safety net: force all visible after 3s
       setTimeout(() => {
         fadeEls.forEach(el => el.classList.add('visible'));
-      }, 4000);
+      }, 3000);
     }
   }
   
