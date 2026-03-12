@@ -88,14 +88,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   
-  // --- Smooth scroll for anchor links ---
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
+  // --- Smooth scroll for in-page anchors ---
+  document.querySelectorAll('a[href*="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
+      const href = link.getAttribute('href');
+      if (!href) return;
+
+      const url = new URL(href, window.location.href);
+      const isSamePage =
+        url.origin === window.location.origin &&
+        url.pathname.replace(/\/+$/, '') === window.location.pathname.replace(/\/+$/, '');
+
+      if (!isSamePage || !url.hash) return;
+
+      const target = document.querySelector(url.hash);
+      if (!target) return;
+
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', url.hash);
     });
   });
 });
