@@ -479,6 +479,15 @@ h4 { font-size: 1.1rem; }
   padding: var(--space-3xl) 0;
 }
 
+/* Reduce initial paint cost by deferring offscreen section rendering */
+@supports (content-visibility: auto) {
+  .section,
+  .site-footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 900px;
+  }
+}
+
 .section--alt {
   background: var(--color-bg-alt);
 }
@@ -1309,6 +1318,22 @@ h4 { font-size: 1.1rem; }
 .fade-up.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .fade-up {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* --- Responsive --- */

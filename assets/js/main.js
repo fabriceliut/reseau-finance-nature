@@ -4,6 +4,8 @@
    ============================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // --- Mobile nav toggle ---
   const toggle = document.getElementById('mobileToggle');
   const nav = document.getElementById('mainNav');
@@ -40,18 +42,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Scroll animations (fade-up) ---
   const fadeEls = document.querySelectorAll('.fade-up');
   if (fadeEls.length > 0) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, i * 80);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    
-    fadeEls.forEach(el => observer.observe(el));
+    if (prefersReducedMotion) {
+      fadeEls.forEach(el => el.classList.add('visible'));
+    } else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, i * 80);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      
+      fadeEls.forEach(el => observer.observe(el));
+    }
   }
   
   // --- Resource filter (members page) ---
@@ -105,8 +111,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!target) return;
 
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
       history.replaceState(null, '', url.hash);
     });
   });
+
+  // --- Scroll to hash on page load (cross-page navigation) ---
+  if (window.location.hash) {
+    const hashTarget = document.querySelector(window.location.hash);
+    if (hashTarget) {
+      requestAnimationFrame(() => {
+        hashTarget.scrollIntoView({ behavior: 'auto', block: 'start' });
+      });
+    }
+  }
 });
