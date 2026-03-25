@@ -23,7 +23,8 @@ Le **Réseau Finance Nature** est une association loi 1901, créée en 2026, qui
 | **Page d'accueil** | Présentation complète : objectifs, contexte, chiffres clés, missions, adhésion, gouvernance |
 | **Formulaire de contact** | Envoi direct à pauline@reseaufinancenature.org via [FormSubmit](https://formsubmit.co/) |
 | **Espace membres** | Zone protégée par mot de passe avec ressources exclusives (articles, vidéos, documents) |
-| **Responsive** | Design adapté mobile, tablette et desktop (7 breakpoints) |
+| **Actualités** | Timeline des articles récents affichée sur la page d'accueil |
+| **Responsive** | Design adapté mobile, tablette et desktop (8 breakpoints) |
 | **Accessibilité WCAG AA** | Contrastes vérifiés, navigation clavier, ARIA, skip-link, focus-visible |
 | **SEO complet** | Meta tags, Open Graph, sitemap, Jekyll SEO Tag |
 | **Déploiement auto** | Chaque push sur `main` déclenche un build Jekyll → GitHub Pages |
@@ -43,8 +44,8 @@ Le **Réseau Finance Nature** est une association loi 1901, créée en 2026, qui
 | Métrique | Valeur |
 |---|---|
 | Poids total du site | < 600 Ko |
-| CSS | 38.7 Ko (design system avec variables CSS) |
-| JavaScript | 6.8 Ko (vanilla, zéro dépendance) |
+| CSS | 40.4 Ko (design system avec variables CSS) |
+| JavaScript | 7.4 Ko (vanilla, zéro dépendance) |
 | Font Awesome | 2.6 Ko subset (vs 100 Ko CDN complet) |
 | Images | Optimisées retina, compressées |
 | Preload | CSS + fonts critiques |
@@ -72,13 +73,15 @@ Le **Réseau Finance Nature** est une association loi 1901, créée en 2026, qui
 
 ```
 ├── _config.yml              # Configuration Jekyll
+├── CNAME                    # Domaine personnalisé GitHub Pages
+├── Gemfile                  # Dépendances Ruby / Jekyll
 ├── _layouts/                # Templates (default, post, ressource)
 ├── _includes/               # Composants (header, footer)
 ├── _posts/                  # Articles de blog (Markdown)
 ├── _ressources/             # Ressources espace membres (Markdown)
 ├── assets/
 │   ├── css/
-│   │   ├── style.css        # Design system (~2000 lignes)
+│   │   ├── style.css        # Design system (~2100 lignes)
 │   │   └── fontawesome-subset.css  # 39 icônes (2.6 Ko)
 │   ├── images/              # Logo, photos équipe, OG image
 │   └── js/
