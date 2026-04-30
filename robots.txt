@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /contact/merci/
+Allow: /
+
+Sitemap: https://reseaufinancenature.org/sitemap.xml
