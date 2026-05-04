@@ -9,7 +9,7 @@
 
 ## À propos
 
-Le **Réseau Finance Nature** est une association loi 1901, créée en 2026, qui rassemble les acteurs financiers territoriaux (banques, sociétés de gestion, family offices, réseaux de Business Angels…) autour de quatre objectifs :
+Le **Réseau Finance Nature**, créé en 2026, rassemble les acteurs financiers territoriaux (banques, sociétés de gestion, family offices, réseaux de Business Angels…) autour de quatre objectifs :
 
 1. **Sensibiliser & former** aux enjeux de la nature comme facteur clé pour les entreprises et les territoires
 2. **Mobiliser les financements** privés en faveur de projets à impact positif pour la nature
