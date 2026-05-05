@@ -2144,3 +2144,9 @@ h4 { font-size: 1.1rem; }
     padding: var(--space-md);
   }
 }
+
+/* --- Page-specific styles --- */
+.news-page,
+.risks-page {
+  padding-top: var(--header-height);
+}
