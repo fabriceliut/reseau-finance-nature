@@ -31,9 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
   navParents.forEach(parent => {
     const label = parent.querySelector('.nav-parent-label');
     if (label) {
+      const toggle = () => parent.classList.toggle('open');
       label.addEventListener('click', (e) => {
         e.preventDefault();
-        parent.classList.toggle('open');
+        toggle();
+      });
+      label.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggle();
+        }
       });
     }
   });
