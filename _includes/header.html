@@ -7,7 +7,13 @@
     <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
       <ul>
         <li><a href="{{ '/' | relative_url }}#qui-sommes-nous">Qui sommes-nous ?</a></li>
-        <li><a href="{{ '/risques/' | relative_url }}" class="nav-members">Risques Nature</a></li>
+        <li class="nav-parent">
+          <span class="nav-parent-label">Risques Nature</span>
+          <ul class="subnav">
+            <li><a href="{{ '/risques/ressources/' | relative_url }}">Ressources</a></li>
+            <li><a href="{{ '/risques/acteurs/' | relative_url }}">Acteurs</a></li>
+          </ul>
+        </li>
         <li><a href="{{ '/gouvernance/' | relative_url }}" class="nav-members">Gouvernance Nature</a></li>
         <li><a href="{{ '/financements/' | relative_url }}" class="nav-members">Finance Nature</a></li>
         <li><a href="{{ '/actualites/' | relative_url }}" class="nav-members"><i class="fas fa-leaf" aria-hidden="true"></i> Actualités</a></li>

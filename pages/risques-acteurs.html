@@ -1,0 +1,53 @@
+---
+layout: default
+title: Acteurs
+body_class: risques-actors-page
+permalink: /risques/acteurs/
+---
+
+<div class="news-page">
+  <div class="container">
+    <div class="news-header fade-up">
+      <div>
+        <h1>Acteurs</h1>
+        <p style="color: var(--color-text-light); margin-top: 0.25rem;">Découvrez les acteurs engagés sur les enjeux de la nature</p>
+      </div>
+      <div class="resource-filters" role="group" aria-label="Filtrer par type">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">Tout</button>
+        <button class="filter-btn" data-filter="article" aria-pressed="false"><i aria-hidden="true" class="fas fa-file-alt"></i> Articles</button>
+        <button class="filter-btn" data-filter="video" aria-pressed="false"><i aria-hidden="true" class="fas fa-play-circle"></i> Vidéos</button>
+        <button class="filter-btn" data-filter="document" aria-pressed="false"><i aria-hidden="true" class="fas fa-file-pdf"></i> Documents</button>
+      </div>
+    </div>
+
+    <div class="resource-grid" id="resourceGrid">
+      <a href="https://www.biodivcorp.com/" class="resource-card fade-up" data-type="article" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-accent"></div>
+        <div class="resource-card-thumbnail">
+          <svg viewBox="0 0 400 225" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="siteGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" />
+                <stop offset="100%" stop-color="#f4f7f4" />
+              </linearGradient>
+            </defs>
+            <rect x="8" y="8" width="384" height="209" rx="18" fill="url(#siteGrad)" stroke="#d4e0d8" stroke-width="2" />
+            <rect x="20" y="26" width="360" height="18" rx="9" fill="#122A1A" />
+            <rect x="24" y="56" width="160" height="18" rx="6" fill="#357248" />
+            <rect x="24" y="86" width="340" height="16" rx="6" fill="#d4e0d8" />
+            <rect x="24" y="110" width="310" height="16" rx="6" fill="#d4e0d8" />
+            <rect x="24" y="134" width="250" height="16" rx="6" fill="#d4e0d8" />
+            <rect x="24" y="158" width="280" height="16" rx="6" fill="#d4e0d8" />
+            <circle cx="40" cy="40" r="10" fill="#BFFFB5" />
+            <text x="40" y="44" font-family="Inter, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#122A1A">B</text>
+          </svg>
+        </div>
+        <div class="resource-card-body">
+          <div class="resource-card-type"><i aria-hidden="true" class="fas fa-file-alt"></i> Site</div>
+          <h3>BiodivCorp</h3>
+          <p>BiodivCorp accompagne les entreprises dans l’intégration des enjeux biodiversité grâce à des outils et du conseil opérationnel.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

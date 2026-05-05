@@ -316,12 +316,60 @@ h4 { font-size: 1.1rem; }
   gap: var(--space-md);
 }
 
+.main-nav li {
+  position: relative;
+}
+
+.main-nav .nav-parent-label,
 .main-nav a {
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--color-text);
   position: relative;
   padding: 0.25rem 0;
+}
+
+.main-nav .nav-parent-label {
+  cursor: default;
+}
+
+.main-nav .subnav {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  flex-direction: column;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-sm) 0;
+  min-width: 180px;
+  z-index: 1005;
+}
+
+.main-nav .subnav li {
+  margin: 0;
+  border: none;
+}
+
+.main-nav .subnav a {
+  display: block;
+  padding: 0.7rem 1rem;
+  color: var(--color-text);
+}
+
+.main-nav .subnav a:hover {
+  background: rgba(27, 67, 50, 0.04);
+  color: var(--color-primary);
+}
+
+.main-nav .nav-parent:hover > .subnav {
+  display: flex;
+}
+
+.main-nav a.btn-nav {
+  padding: 0.9rem 3.2rem;
 }
 
 .main-nav a.btn-nav {
@@ -1428,6 +1476,19 @@ h4 { font-size: 1.1rem; }
 
   .main-nav ul li:last-child {
     border-bottom: none;
+  }
+
+  .main-nav .subnav {
+    position: static;
+    display: block;
+    border: none;
+    box-shadow: none;
+    padding-left: var(--space-lg);
+    margin-top: 0;
+  }
+
+  .main-nav .subnav a {
+    padding: var(--space-sm) 0 0.75rem var(--space-lg);
   }
   
   .main-nav a {
