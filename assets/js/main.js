@@ -26,10 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
         toggle.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       });
-    });
-  }
-  
-  // --- Header scroll effect ---
+  // --- Subnav toggle ---
+  const navParents = document.querySelectorAll('.nav-parent');
+  navParents.forEach(parent => {
+    const label = parent.querySelector('.nav-parent-label');
+    if (label) {
+      label.addEventListener('click', (e) => {
+        e.preventDefault();
+        parent.classList.toggle('open');
+      });
+    }
+  });
   const header = document.getElementById('siteHeader');
   if (header) {
     const onScroll = () => {
