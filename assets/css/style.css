@@ -1086,6 +1086,29 @@ h4 { font-size: 1.1rem; }
 .resource-card[data-type="article"] .resource-card-accent { background: var(--color-accent); }
 .resource-card[data-type="document"] .resource-card-accent { background: var(--color-accent); }
 
+.resource-card-thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: rgba(27, 67, 50, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+}
+
+.resource-card-thumbnail .thumbnail-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.resource-card-thumbnail .thumbnail-label i {
+  font-size: 1.2rem;
+}
+
 .resource-card-body {
   padding: var(--space-md);
 }
