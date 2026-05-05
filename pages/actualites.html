@@ -20,37 +20,6 @@ permalink: /actualites/
         </div>
       </div>
       
-      <div class="resource-grid" id="resourceGrid">
-        {% assign sorted_resources = site.ressources | sort: 'date' | reverse %}
-        {% for resource in sorted_resources %}
-        <a href="{{ resource.url | relative_url }}" class="resource-card fade-up" data-type="{{ resource.type }}">
-          <div class="resource-card-accent"></div>
-          <div class="resource-card-body">
-            <div class="resource-card-type">
-              {% if resource.type == "video" %}
-              <i aria-hidden="true" class="fas fa-play-circle"></i> Vidéo
-              {% elsif resource.type == "article" %}
-              <i aria-hidden="true" class="fas fa-file-alt"></i> Article
-              {% elsif resource.type == "document" %}
-              <i aria-hidden="true" class="fas fa-file-pdf"></i> Document
-              {% else %}
-              <i aria-hidden="true" class="fas fa-bookmark"></i> Ressource
-              {% endif %}
-            </div>
-            <h3>{{ resource.title }}</h3>
-            <p>{{ resource.description | default: resource.excerpt | strip_html | truncatewords: 25 }}</p>
-            <div class="resource-card-date">{{ resource.date | date: "%d %B %Y" }}</div>
-          </div>
-        </a>
-        {% endfor %}
-      </div>
-
-      {% if site.ressources.size == 0 %}
-      <div style="text-align: center; padding: 4rem 0; color: var(--color-text-muted);">
-        <i aria-hidden="true" class="fas fa-folder-open" style="font-size: 2.5rem; margin-bottom: 1rem; display: block;"></i>
-        <p>Les ressources seront bientôt disponibles.</p>
-      </div>
-      {% endif %}
     </div>
   </div>
 </div>
