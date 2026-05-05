@@ -1,18 +1,16 @@
 ---
 layout: default
-title: Espace Membres
-body_class: members-page
-permalink: /espace-membres/
-protected: true
+title: Actualités
+body_class: news-page
+permalink: /actualites/
 ---
 
-<div class="protected-content" id="protectedContent" style="display:none;">
-  <div class="members-page">
+<div class="news-page">
     <div class="container">
-      <div class="members-header fade-up">
+      <div class="news-header fade-up">
         <div>
-          <h1>Espace Ressources</h1>
-          <p style="color: var(--color-text-light); margin-top: 0.25rem;">Ressources exclusives pour les membres du réseau</p>
+          <h1>Actualités et Ressources</h1>
+          <p style="color: var(--color-text-light); margin-top: 0.25rem;">Découvrez les dernières actualités et ressources du Réseau Finance Nature</p>
         </div>
         <div class="resource-filters" role="group" aria-label="Filtrer par type">
           <button class="filter-btn active" data-filter="all" aria-pressed="true">Tout</button>
@@ -56,22 +54,3 @@ protected: true
     </div>
   </div>
 </div>
-
-<section class="login-gate" id="loginGate" aria-label="Connexion espace membres">
-  <div class="login-container">
-    <div class="login-card">
-      <div class="login-icon"><i aria-hidden="true" class="fas fa-lock"></i></div>
-      <h2>Espace Membres</h2>
-      <p>Accédez aux ressources exclusives du Réseau Finance Nature.</p>
-      <div class="login-error" id="loginError" role="alert" aria-live="assertive">Mot de passe incorrect. Veuillez réessayer.</div>
-      <form id="loginForm" class="login-form">
-        <div class="form-group">
-          <label for="password">Mot de passe</label>
-          <input type="password" id="password" name="password" placeholder="Entrez le mot de passe membre" required>
-        </div>
-        <button type="submit" class="btn btn-primary btn-full">Accéder <i aria-hidden="true" class="fas fa-arrow-right"></i></button>
-      </form>
-      <p class="login-help">Vous n'avez pas le mot de passe ? <a href="{{ '/contact/' | relative_url }}">Contactez-nous</a> pour rejoindre le réseau.</p>
-    </div>
-  </div>
-</section>
