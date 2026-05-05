@@ -1094,6 +1094,14 @@ h4 { font-size: 1.1rem; }
   align-items: center;
   justify-content: center;
   color: var(--color-text-muted);
+  overflow: hidden;
+}
+
+.resource-card-thumbnail svg,
+.resource-card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .resource-card-thumbnail .thumbnail-label {
