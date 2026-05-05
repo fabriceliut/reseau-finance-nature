@@ -558,20 +558,21 @@ h4 { font-size: 1.1rem; }
 
 /* --- Cards --- */
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: center;
   gap: var(--space-lg);
 }
 
 @media (max-width: 968px) {
   .card-grid {
-    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
   }
 }
 
 @media (max-width: 600px) {
   .card-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
