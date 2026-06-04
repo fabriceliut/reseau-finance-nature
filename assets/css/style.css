@@ -1076,6 +1076,36 @@ h4 { font-size: 1.1rem; }
   margin: 0;
 }
 
+.news-page .container {
+  padding-top: clamp(2rem, 4vw, 3rem);
+  padding-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+.news-page .news-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  margin-bottom: clamp(2rem, 4vw, 3.25rem);
+}
+
+.news-page .news-header-copy {
+  max-width: 42rem;
+}
+
+.news-page .news-header h1 {
+  margin: 0;
+  line-height: 1.05;
+}
+
+.news-header-intro {
+  margin: 0.85rem 0 0;
+  max-width: 38rem;
+  color: var(--color-text-light);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
 .resource-filters {
   display: flex;
   gap: 0.5rem;
@@ -1108,6 +1138,20 @@ h4 { font-size: 1.1rem; }
   gap: var(--space-md);
 }
 
+.news-page .resource-filters {
+  gap: 0.75rem;
+  row-gap: 0.9rem;
+  padding-top: 0.35rem;
+}
+
+.news-page .filter-btn {
+  padding: 0.65rem 1.2rem;
+}
+
+.news-page .resource-grid {
+  gap: clamp(1.5rem, 3vw, 2rem);
+}
+
 .risques-actors-page .resource-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
@@ -1121,6 +1165,10 @@ h4 { font-size: 1.1rem; }
   text-decoration: none;
   color: inherit;
   display: block;
+}
+
+.news-page .resource-card {
+  height: 100%;
 }
 
 .resource-card:hover {
@@ -1173,6 +1221,14 @@ h4 { font-size: 1.1rem; }
   padding: var(--space-md);
 }
 
+.news-page .resource-card-body {
+  padding: clamp(1.35rem, 2vw, 1.75rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-height: 100%;
+}
+
 .resource-card-type {
   display: inline-flex;
   align-items: center;
@@ -1182,6 +1238,10 @@ h4 { font-size: 1.1rem; }
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-bottom: var(--space-xs);
+}
+
+.news-page .resource-card-type {
+  margin-bottom: 0;
 }
 
 .resource-card[data-type="video"] .resource-card-type { color: #E74C3C; }
@@ -1194,16 +1254,31 @@ h4 { font-size: 1.1rem; }
   color: var(--color-primary-dark);
 }
 
+.news-page .resource-card h3 {
+  margin: 0;
+  line-height: 1.35;
+}
+
 .resource-card p {
   font-size: 0.85rem;
   color: var(--color-text-light);
   line-height: 1.6;
 }
 
+.news-page .resource-card p {
+  margin: 0;
+  line-height: 1.75;
+}
+
 .resource-card-date {
   font-size: 0.75rem;
   color: var(--color-text-muted);
   margin-top: var(--space-sm);
+}
+
+.news-page .resource-card-date {
+  margin-top: auto;
+  padding-top: 0.5rem;
 }
 
 /* --- Ressource single --- */
@@ -1560,6 +1635,21 @@ h4 { font-size: 1.1rem; }
   .members-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .news-page .news-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: var(--space-xl);
+  }
+
+  .news-page .news-header-copy,
+  .news-page .resource-filters {
+    width: 100%;
+  }
+
+  .news-page .filter-btn {
+    padding: 0.6rem 1rem;
   }
   
   .mobile-toggle.open span:nth-child(1) {
