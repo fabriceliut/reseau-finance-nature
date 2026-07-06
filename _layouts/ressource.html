@@ -2,8 +2,7 @@
 layout: default
 body_class: ressource-page
 ---
-<div class="protected-content" id="protectedContent" style="display:none;">
-  <article class="ressource">
+<article class="ressource">
     <div class="container">
       <div class="ressource-header">
         <div class="ressource-meta">
@@ -39,22 +38,3 @@ body_class: ressource-page
       </div>
     </div>
   </article>
-</div>
-
-<div class="login-gate" id="loginGate">
-  <div class="login-container">
-    <div class="login-card">
-      <div class="login-icon"><i class="fas fa-lock"></i></div>
-      <h2>Espace Membres</h2>
-      <p>Cette ressource est réservée aux membres du Réseau Finance Nature.</p>
-      <form id="loginForm" class="login-form">
-        <div class="form-group">
-          <label for="password">Mot de passe</label>
-          <input type="password" id="password" name="password" placeholder="Entrez le mot de passe membre" required>
-        </div>
-        <button type="submit" class="btn btn-primary btn-full">Accéder <i class="fas fa-arrow-right"></i></button>
-      </form>
-      <p class="login-help">Vous n'avez pas le mot de passe ? <a href="{{ '/contact/' | relative_url }}">Contactez-nous</a> pour rejoindre le réseau.</p>
-    </div>
-  </div>
-</div>
